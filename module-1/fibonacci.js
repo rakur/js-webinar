@@ -15,7 +15,18 @@ function fibonacci(n) {
      * Also take into consideration the documentation of the function!
      */
     // PLACE YOUR CODE BETWEEN THIS...
-
+    if (n <= 0) {
+        return 0;
+    }
+    if (n < 3) {
+        return 1;
+    }
+    let temp = 1;
+    nThFibonacci = 2;
+    for (let i = 3; i < n; i++) {
+        nThFibonacci += temp;
+        temp = nThFibonacci - temp;
+    }
     // ...AND THIS COMMENT LINE!
     return nThFibonacci;
 }

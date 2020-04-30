@@ -21,7 +21,19 @@ function grade(score) {
      * Also take into consideration the documentation of the function!
      */
     // PLACE YOUR CODE BETWEEN THIS...
-
+    if (typeof score !== "number" || score < 0 || score > 100) {
+        return 0;
+    }
+    switch (true) {
+        case score <= 59:
+            gradeOfStudent = 1;
+            break;
+        case score >= 90:
+            gradeOfStudent = 5;
+            break;
+        default:
+            gradeOfStudent = Math.floor((score - 40) / 10);  
+    }
     // ...AND THIS COMMENT LINE!
     return gradeOfStudent;
 }

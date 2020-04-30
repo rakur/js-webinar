@@ -105,7 +105,7 @@ describe('Element Class', () => {
             const child = new Element('Title', {css: 'h1'});
             element.addChildren(child);
 
-            expect(() => element.get('Footer')).to.throw();
+            expect(() => element.get('Footer')).to.throw("No element with this name found");
         });
     });
 });
